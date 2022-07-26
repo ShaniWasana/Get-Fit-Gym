@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="lblContext" prefHeight="562.0" prefWidth="773.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderDetailscontroller">
+   <children>
+      <ImageView fitHeight="562.0" fitWidth="803.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/R%20(1).jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblOderDetails" layoutX="16.0" layoutY="9.0" text="ODER DETAILS" textFill="#f5efef">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="5.0" prefHeight="82.0" prefWidth="757.0" />
+      <Button layoutX="614.0" layoutY="507.0" mnemonicParsing="false" onAction="#CancelOnAction" prefHeight="28.0" prefWidth="90.0" style="-fx-background-color: #f53b57;" text="CANCEL" textFill="#fffdfd" />
+      <TableView fx:id="tblTrainerId" layoutX="107.0" layoutY="193.0" prefHeight="242.0" prefWidth="442.0">
+         <columns>
+            <TableColumn fx:id="tblOrderId" prefWidth="125.0" text="Order ID" />
+            <TableColumn fx:id="tblMemberId" prefWidth="93.0" text="Member ID" />
+            <TableColumn fx:id="tblSup" minWidth="7.0" prefWidth="132.0" text="Suppliment ID" />
+            <TableColumn fx:id="tblQuantity" prefWidth="93.0" text="Quantity" />
+         </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#DeleteOnAction" text="Delete" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <JFXTextField fx:id="txtSearch" layoutX="107.0" layoutY="120.0" onKeyReleased="#SearchKey" prefHeight="25.0" prefWidth="529.0" promptText="order ID:" />
+   </children>
+</AnchorPane>

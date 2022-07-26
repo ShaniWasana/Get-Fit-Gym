@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="lblContext" prefHeight="562.0" prefWidth="773.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Paymentscontroller">
+   <children>
+      <ImageView fitHeight="562.0" fitWidth="803.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/R%20(1).jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblPayment" layoutX="16.0" layoutY="9.0" text="Payment" textFill="#f5efef">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="5.0" prefHeight="82.0" prefWidth="757.0" />
+      <Label fx:id="lblPackageID" layoutX="65.0" layoutY="173.0" text="Package ID:" textFill="#f5f2f2">
+         <font>
+            <Font name="Cambria Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMemberID" layoutX="66.0" layoutY="105.0" text="Member ID :" textFill="#f5f2f2">
+         <font>
+            <Font name="Cambria Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPaymentID" layoutX="62.0" layoutY="242.0" text="Payment ID ;" textFill="#f5f2f2">
+         <font>
+            <Font name="Cambria Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAmount" layoutX="62.0" layoutY="362.0" text="Amount" textFill="#f5f2f2">
+         <font>
+            <Font name="Cambria Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtMemberID" labelFloat="true" layoutX="67.0" layoutY="131.0" prefHeight="25.0" prefWidth="547.0" promptText="Member ID" unFocusColor="#fcfafa" />
+      <JFXTextField fx:id="txtPaymentID" labelFloat="true" layoutX="62.0" layoutY="269.0" prefHeight="25.0" prefWidth="547.0" promptText="Payment ID" unFocusColor="#fcfafa">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAmount" labelFloat="true" layoutX="62.0" layoutY="385.0" prefHeight="25.0" prefWidth="547.0" promptText="Amount" unFocusColor="#fcfafa">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </JFXTextField>
+      <Button layoutX="614.0" layoutY="507.0" mnemonicParsing="false" onAction="#CancelOnAction" prefHeight="28.0" prefWidth="90.0" style="-fx-background-color: #f53b57;" text="CANCEL" textFill="#fffdfd" />
+      <Button layoutX="441.0" layoutY="201.0" mnemonicParsing="false" onAction="#ShowPackageOnAction" prefHeight="25.0" prefWidth="137.0" style="-fx-background-color: #cc8e35;" text="SHOW PACKAGE" textFill="#fcf8f8" />
+      <Label fx:id="lblDate" layoutX="62.0" layoutY="304.0" text="Date :" textFill="#f5f2f2">
+         <font>
+            <Font name="Cambria Bold" size="13.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="Datepicker" layoutX="62.0" layoutY="330.0" />
+      <Button fx:id="btnSearch" layoutX="498.0" layoutY="507.0" mnemonicParsing="false" onAction="#SearchOnAction" prefHeight="28.0" prefWidth="90.0" style="-fx-background-color: #cc8e35;" text="SEARCH" textFill="#fffdfd" />
+      <Button fx:id="btnPayment" layoutX="367.0" layoutY="507.0" mnemonicParsing="false" onAction="#PrintOnAction" prefHeight="28.0" prefWidth="90.0" style="-fx-background-color: #8e44ad;" text="PRINT BILL" textFill="#fffdfd" />
+      <Button layoutX="730.0" layoutY="14.0" mnemonicParsing="false" onAction="#NewOnAction" prefHeight="28.0" prefWidth="60.0" style="-fx-background-color: #0be881;" text="+New" textFill="#fffdfd" />
+      <ComboBox fx:id="cmbPId" layoutX="60.0" layoutY="201.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
